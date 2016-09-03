@@ -1,0 +1,50 @@
+1)
+Command: git checkout 640273807f
+Comment: went to version saved at the time of the "hello world" commit
+
+2)
+Command: git checkout bug
+Comment: went to the bug branch
+
+3)
+Commands: git blame cool.cpp
+	 git checkout LinusTorvalds2014
+Comment: Found out who messed with the lines of code in cool.cpp, then switched to the LinusTorvalds2014 branch
+
+4) 
+Command: git ls-files
+Comment: showed a text file entitled .gitIgnore, which I opened using start
+
+5)
+Command: git checkout tree
+Comment: switched to the tree branch
+
+6)
+Command: ./outputclue.sh nextclue_input.cpp
+Comment: printed Level 7 instructions saying that nextclue_input needed to be merged with nextclue_input in different branch.
+
+7)
+Command: git merge tree code4life
+	 ./outputclue.sh nextclue_input.cpp
+Comment: conflict in merge from nextclue_input, resolved by changing the tree version to mimic
+	 the code4life version. Then ran sh file again, told me to go to the mouse branch. 
+
+8) 
+Commands: git diff mouse bug
+	  git checkout Henry
+Comment: compares the differences between the files in the branches mouse and bug. 
+	 Checked out to the branch named Henry (actually a branch tagged Henry).
+9)
+Commands: git tag -d Henry
+	  git checkout Henry
+Comment: Deleted the tag named Henry, which allowed me to checkout the branch Henry.
+
+10)
+Commands: git remote add upstream https://github.com/drami025/git-game.git
+	  git remote -v
+	  git fetch upstream
+	  git checkout master
+	  git merge upstream/master
+
+Comment: set remote repository, then updated the local repository from it.
+
