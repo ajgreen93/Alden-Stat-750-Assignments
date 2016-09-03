@@ -1,6 +1,6 @@
 1)
 Command: git checkout 640273807f
-Comment: went to version saved at the time of the "hello world" commit
+Comment: went to version saved at the time of the "hello world" commit  
 
 2)
 Command: git checkout bug
