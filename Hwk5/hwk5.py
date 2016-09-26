@@ -31,14 +31,22 @@ mdscos = manifold.MDS()
 positions2 = mds2.fit(distanceMatrix2)
 positionscos = mdscos.fit(distanceMatrixcos)
 
-#~ plt.scatter(positions2.embedding_[:,0],positions2.embedding_[:,1])
-#~ plt.show()
+plt.scatter(positions2.embedding_[:,0],positions2.embedding_[:,1])
+plt.show()
 
-#~ plt.scatter(positionscos.embedding_[:,0],positionscos.embedding_[:,1])
-#~ plt.show()
+plt.scatter(positionscos.embedding_[:,0],positionscos.embedding_[:,1])
+plt.show()
 
-#~ scipy.misc.imsave('dist_2.png', distanceMatrix2)
-#~ scipy.misc.imsave('dist_cos.png', distanceMatrixcos)
+scipy.misc.imsave('dist_2.png', distanceMatrix2)
+scipy.misc.imsave('dist_cos.png', distanceMatrixcos)
+
+with open("d_2.csv", 'wb') as myfile:
+	wr = csv.writer(myfile)
+	wr.writerows(collection_of_BoWs)
+	
+with open("distcos.csv", 'wb') as myfile:
+	wr = csv.writer(myfile)
+	wr.writerows(collection_of_BoWs)
 
 
 
