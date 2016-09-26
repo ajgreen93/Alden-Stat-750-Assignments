@@ -1,0 +1,4 @@
+We see that the art files are mostly closest to entirely other art files (when we choose k = 5) but that music files
+are closest to a mixture of other art and music files. This makes sense, as there are more art files than music files.
+To think of it in a statistical sense, the decision boundary of a naive kNN classifier based on bag of words is biased towards misclassifying music
+files because the problem exhibits class imbalance.
