@@ -19,26 +19,26 @@ BoWcorpus = np.genfromtxt('corpus.csv',delimiter = ',')
 distanceMatrix2 = np.zeros((BoWcorpus.shape[0],BoWcorpus.shape[0]))
 for i in range(distanceMatrix2.shape[0]):
 	for j in range(distanceMatrix2.shape[0]):
-		distanceMatrix2[i,j] = d2(BoWcorpus[i],BoWcorpus[j])
+		distanceMatrix2[i,j] = d2(BoWcorpus[i,:],BoWcorpus[j,:])
 
 distanceMatrixcos = np.zeros((BoWcorpus.shape[0],BoWcorpus.shape[0]))
 for i in range(distanceMatrixcos.shape[0]):
 	for j in range(distanceMatrixcos.shape[0]):
-		distanceMatrixcos[i,j] = dcos(BoWcorpus[i],BoWcorpus[j])
+		distanceMatrixcos[i,j] = dcos(BoWcorpus[i,:],BoWcorpus[j,:])
 
 mds2 = manifold.MDS()
 mdscos = manifold.MDS()
 positions2 = mds2.fit(distanceMatrix2)
 positionscos = mdscos.fit(distanceMatrixcos)
 
-plt.scatter(positions2.embedding_[:,0],positions2.embedding_[:,1])
-plt.show()
+#~ plt.scatter(positions2.embedding_[:,0],positions2.embedding_[:,1])
+#~ plt.show()
 
-plt.scatter(positionscos.embedding_[:,0],positionscos.embedding_[:,1])
-plt.show()
+#~ plt.scatter(positionscos.embedding_[:,0],positionscos.embedding_[:,1])
+#~ plt.show()
 
-scipy.misc.imsave('dist_2.png', distanceMatrix2)
-scipy.misc.imsave('dist_cos.png', distanceMatrixcos)
+#~ scipy.misc.imsave('dist_2.png', distanceMatrix2)
+#~ scipy.misc.imsave('dist_cos.png', distanceMatrixcos)
 
 
 
