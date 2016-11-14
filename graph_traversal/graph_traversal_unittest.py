@@ -1,5 +1,8 @@
 import unittest
+<<<<<<< HEAD
 import numpy as np
+=======
+>>>>>>> master
 from graph_traversal import *
 
 def test_node_entry():
@@ -22,6 +25,7 @@ def test_edge_entry():
 			edge = edge.nextEdge
 	
 	return graphEdges
+<<<<<<< HEAD
 
 def test_adj():
 	nodes  = [Node(i) for i in range(2)]
@@ -29,6 +33,8 @@ def test_adj():
 	graph = Graph(nodes,edges)
 	
 	return graph.create_adj_matrix()
+=======
+>>>>>>> master
 	
 class tokenizeTests(unittest.TestCase):
 
@@ -37,9 +43,12 @@ class tokenizeTests(unittest.TestCase):
 	
 	def test_edges(self):
 		self.assertEqual(test_edge_entry(),[[0,1],[0,1]])
+<<<<<<< HEAD
 	
 	def test_adj(self):
 		self.assertEqual(np.array_equal(test_adj(),np.matrix([[0,1],[1,0]])),True)
+=======
+>>>>>>> master
 		
 if __name__ == '__main__':
 	unittest.main()

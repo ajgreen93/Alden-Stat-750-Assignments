@@ -45,7 +45,7 @@ class Graph:
 				print edge.startNode,edge.endNode, " ",
 				edge = edge.nextEdge
 			print '\n'
-			
+
 	def create_adj_matrix(self):
 		n = len(self.nodes)
 		idx = dict((key,value) for (key,value) in zip(self.nodes.keys(),range(n)))
@@ -60,7 +60,6 @@ class Graph:
 				edge = edge.nextEdge
 		
 		return adj_matrix
-		
 
 
 			
