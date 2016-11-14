@@ -47,6 +47,9 @@ class Graph:
 			print '\n'
 
 	def create_adj_matrix(self):
+    ## this is the distinct exercise for my homework 10, 
+    ## which I accidentally included on the same branch as for
+    ## hwk9
 		n = len(self.nodes)
 		idx = dict((key,value) for (key,value) in zip(self.nodes.keys(),range(n)))
 		
