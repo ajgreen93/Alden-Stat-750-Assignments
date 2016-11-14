@@ -59,7 +59,7 @@ def output_max_stack(document):
 			node.sides  = map(int,lines[i].rstrip('\n').split(' '))
 			Parent.child = node
 			Parent = node
-		
+	 	
 	max_stack = find_max_stack(node = Head.child)
 	convert_to_letters = {1:'f',
 						  2:'b',
